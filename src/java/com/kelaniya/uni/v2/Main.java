@@ -6,6 +6,9 @@ import java.nio.file.Paths;
 import java.util.List;
 
 public class Main {
+
+    //Single responsible principles - VIOLATED
+
     public static void main(String[] args) throws IOException {
 
         //Make sure to validate the arguments before using..
