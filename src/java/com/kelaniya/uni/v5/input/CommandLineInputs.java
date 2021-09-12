@@ -1,6 +1,6 @@
-package com.kelaniya.uni.v4;
+package com.kelaniya.uni.v5.input;
 
-public class CommandLineInputs {
+public class CommandLineInputs implements Inputs {
 
     private final String[] args;
 
