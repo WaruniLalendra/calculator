@@ -7,3 +7,7 @@ public class AddOperation implements Operation {
         return numbers[0]+numbers[1];
     }
 }
+
+//what is the responsibility of the add operation class? - Add two numbers
+
+//Figure out the test cases

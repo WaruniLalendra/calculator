@@ -2,6 +2,7 @@ package com.kelaniya.uni.v5;
 
 import com.kelaniya.uni.v5.input.CommandLineInputs;
 import com.kelaniya.uni.v5.input.Inputs;
+import com.kelaniya.uni.v5.operation.InvalidOperationException;
 import com.kelaniya.uni.v5.operation.Operation;
 import com.kelaniya.uni.v5.operation.OperationFactory;
 import com.kelaniya.uni.v5.repository.FileNumberRepository;
@@ -31,9 +32,16 @@ public class CalculatorApp {
         String operation = inputs.getOperator();
         Double[] numbers = numberRepository.getNumber();
         Operation operation1 = operationFactory.getInstance(operation);
-        Double result = operation1.execute(numbers);
+        Double result = null;
+        try{
+            operation1.execute(numbers);
+        }catch (InvalidOperationException e){
+            ui.showMessage("Error occured" + e.getMessage());
+            return;
+        }
 
-        UI ui = new CmdLineUI();
+
+        //UI ui = new CmdLineUI();
         ui.showMessage("The result is:" + result);
 
     }
