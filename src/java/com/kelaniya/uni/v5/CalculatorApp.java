@@ -34,7 +34,7 @@ public class CalculatorApp {
         Operation operation1 = operationFactory.getInstance(operation);
         Double result = null;
         try{
-            operation1.execute(numbers);
+            result = operation1.execute(numbers);
         }catch (InvalidOperationException e){
             ui.showMessage("Error occured" + e.getMessage());
             return;
