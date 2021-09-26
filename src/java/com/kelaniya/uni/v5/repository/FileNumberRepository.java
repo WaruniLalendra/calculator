@@ -1,5 +1,6 @@
 package com.kelaniya.uni.v5.repository;
 
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -7,12 +8,17 @@ import java.util.List;
 
 public class FileNumberRepository implements NumberRepository {
 
-    public Double[] getNumber() throws IOException {
+    public Double[] getNumber() throws NumberRepositoryException {
 
         //read the numbers text file
-        List<String> numbersStrs = Files.readAllLines(
-                Paths.get("C:\\Users\\Waruni Lalendra\\Desktop\\2021\\calculator\\numbers.txt")
-        );
+        List<String> numbersStrs = null;
+        try {
+            numbersStrs = Files.readAllLines(
+                    Paths.get("C:\\Users\\Waruni Lalendra\\Desktop\\2021\\calculator\\numbers.txt")
+            );
+        } catch (IOException e) {
+            throw new NumberRepositoryException(e,"Couldn't find the text file");
+        }
 
         //System.out.println(numbersStrs.get(0));
 
