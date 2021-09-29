@@ -1,4 +1,4 @@
-package com.kelaniya.uni;
+package com.kelaniya.uni.v1;
 
 import java.io.FileNotFoundException;
 import java.util.Scanner;

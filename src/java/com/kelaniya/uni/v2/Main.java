@@ -44,7 +44,7 @@ public class Main {
 
         System.out.println("The result is:" + result);
 
-        System.out.println(args[0]);
+        //System.out.println(args[0]);
     }
 
 }

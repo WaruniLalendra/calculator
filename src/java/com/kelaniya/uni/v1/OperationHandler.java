@@ -1,6 +1,6 @@
-package com.kelaniya.uni;
+package com.kelaniya.uni.v1;
 
-import com.kelaniya.uni.GetData;
+import com.kelaniya.uni.v1.GetData;
 
 import java.util.Scanner;
 
